@@ -23,6 +23,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    text-align: justify;
 }
 
 
@@ -201,6 +202,20 @@ pre {
 
         path {
             fill: $grey-color;
+        }
+    }
+}
+
+.icon--logo {
+    float: left;
+
+    > svg {
+        display: inline-block;
+        height: 2rem;
+        margin: 0.6rem;
+
+        path {
+            fill: $blue-color;
         }
     }
 }
