@@ -15,4 +15,17 @@ $(document).ready(function() {
       1000
     );
   });
+
+  $('.scroll-fade').css('opacity', 0);
+
+  $(window).scroll(function() {
+    let windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $('.scroll-fade').each(function() {
+      let objectBottom = $(this).offset().top + $(this).outerHeight() / 2;
+
+      if (objectBottom < windowBottom) {
+        $(this).fadeTo('slow', 1);
+      }
+    });
+  });
 });
